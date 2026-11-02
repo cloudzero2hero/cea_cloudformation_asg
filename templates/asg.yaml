@@ -178,3 +178,13 @@ Resources:
           Value: !Ref MyAutoScalingGroup
       AlarmActions:
         - !Ref ScaleOutPolicy
+
+  # Scale Out Policy
+  ScaleOutPolicy:
+    Type: 'AWS::AutoScaling::ScalingPolicy'
+    Properties:
+      AutoScalingGroupName: !Ref MyAutoScalingGroup
+      PolicyType: SimpleScaling
+      ScalingAdjustment: '1'
+      Cooldown: '300'
+      AdjustmentType: ChangeInCapacity

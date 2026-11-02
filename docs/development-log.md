@@ -43,3 +43,15 @@
 ### Validation
 - Pending CloudFormation template validation.
 - Deployment not yet performed.
+
+## Stage 4 - Create the Scale out policy
+
+### Implemented
+- Created Scale Out Policy to define action of the cloudwatch alarm.
+
+### Outstanding
+- Validation and documentation: Validate the template, review security and document limitations and future improvements.
+
+### Validation
+- Pending CloudFormation template validation.
+- Deployment not yet performed.
