@@ -146,3 +146,17 @@ Resources:
             systemctl start httpd
             systemctl enable httpd
             echo "Hello World from Auto Scaling Instance" > /var/www/html/index.html
+
+   # ASG
+  MyAutoScalingGroup:
+    Type: 'AWS::AutoScaling::AutoScalingGroup'
+    Properties:
+      LaunchTemplate:
+        LaunchTemplateId: !Ref MyLaunchTemplate
+        Version: !GetAtt MyLaunchTemplate.LatestVersionNumber
+      MinSize: 1
+      MaxSize: 3
+      DesiredCapacity: 2
+      VPCZoneIdentifier:
+        - !Ref PublicSubnet1A
+        - !Ref PublicSubnet2B
