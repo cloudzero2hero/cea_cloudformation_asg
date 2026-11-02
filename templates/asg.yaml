@@ -160,3 +160,21 @@ Resources:
       VPCZoneIdentifier:
         - !Ref PublicSubnet1A
         - !Ref PublicSubnet2B
+       
+  # Alarm
+  HighCPUAlarm:
+    Type: 'AWS::CloudWatch::Alarm'
+    Properties:
+      AlarmDescription: 'Alarm when CPU exceeds 70%'
+      MetricName: 'CPUUtilization'
+      Namespace: 'AWS/EC2'
+      Statistic: Average
+      Period: '300'
+      EvaluationPeriods: '1'
+      Threshold: '70'
+      ComparisonOperator: GreaterThanThreshold
+      Dimensions:
+        - Name: AutoScalingGroupName
+          Value: !Ref MyAutoScalingGroup
+      AlarmActions:
+        - !Ref ScaleOutPolicy

@@ -30,3 +30,16 @@
 ### Validation
 - Pending CloudFormation template validation.
 - Deployment not yet performed.
+
+## Stage 3 - Create the CloudWatch alam and configured the trigger requirement
+
+### Implemented
+- Created the CloudWatch Alarm and configured for when CPU utilisation exceeds 70%.
+
+### Outstanding
+- Create Scale Out Policy: Add scale out policy to define action of the cloudwatch alarm.
+- Validation and documentation: Validate the template, review security and document limitations and future improvements.
+
+### Validation
+- Pending CloudFormation template validation.
+- Deployment not yet performed.
