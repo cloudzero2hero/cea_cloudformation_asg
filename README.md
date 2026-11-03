@@ -32,3 +32,5 @@ Completed. The repository has been created in stages, with each stage recorded i
 ## Security and Cost Notice
 
 Review security group rules, AMI compatibility and AWS Region settings before deployment. Creating AWS resources may incur charges.
+
+**Write-up:** (https://medium.com/@rwstokes3/scaling-out-with-auto-scaling-groups-using-cloudformation-bbb47a4bb4b6)

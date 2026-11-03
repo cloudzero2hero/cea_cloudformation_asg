@@ -55,3 +55,12 @@
 ### Validation
 - Pending CloudFormation template validation.
 - Deployment not yet performed.
+
+## Stage 5 - Validate depolyment and Auto Scaling Group works
+
+### Validation
+- CloudFormation stack successfully reaching CREATE_COMPLETE.
+- ASG successfully launching the desired number of EC2 instances.
+- Instances appearing across the configured Availability Zones.
+- CloudWatch alarm showing its current state.
+- Scaling policy attached to the ASG.
